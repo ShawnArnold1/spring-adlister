@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head th:replace="fragments/headbar :: headbar('All Posts')">
+    </head>
+    <body>
+        <div th:replace="fragments/navbar :: navbar"></div>
+    
+    
+        <div th:each="post : ${posts}">
+                    <h1 th:text="${post.title}"/>
+                    <p colspan="2" th:text="${post.body}"/>
+                        <a th:href="@{'/posts/edit/' + ${post.id}}" name="Edit" type="button" class="btn btn-danger">
+                            Edit
+                        </a>
+                    <form th:action="@{'/posts/delete/' + ${post.id}}" th:method="post">
+                        <button name="Delete" type="submit" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </form>
+            </div>
+    </body>
+</html>

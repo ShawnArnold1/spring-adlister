@@ -1,0 +1,130 @@
+/*.portImg*/
+/*{*/
+    /*width: 20em;*/
+    /*height: 80em;*/
+/*}*/
+
+/*.letsGo*/
+/*{*/
+    /*position: center;*/
+
+/*}*/
+
+/*body, html {*/
+    /*height: 100%;*/
+/*}*/
+
+/*!* The hero image *!*/
+/*.hero-image {*/
+    /*!* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read *!*/
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/css/boor.jpg");*/
+
+    /*!* Set a specific height *!*/
+    /*height: 50%;*/
+
+    /*!* Position and center the image to scale nicely on all screens *!*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+/*}*/
+
+/*!* Place text in the middle of the image *!*/
+/*.hero-text {*/
+    /*text-align: center;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*color: white;*/
+/*}*/
+
+
+.moveMe
+{
+
+    position: relative;
+    top: 25em;
+
+}
+body
+{
+    padding:0;
+    margin:0;
+    background: url('/images/background.jpg');
+    background-size: 100% 100%;
+}
+
+
+.rain
+{
+    height: 100%;
+    background: url('/images/rain.png');
+    animation: rain .3s linear infinite;
+}
+
+
+.rain:before
+{
+    content: '';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: white;
+    opacity:0;
+
+}
+
+
+
+@keyframes rain
+{
+    0%
+    {
+        background-position: 0% 0%;
+    }
+
+    100%
+    {
+        background-position: 20% 100%;
+    }
+}
+
+
+
+@keyframes lighting
+{
+    0%
+    {
+        opacity:0;
+    }
+    10%
+    {
+        opacity:0;
+    }
+    11%
+    {
+        opacity:1;
+    }
+    14%
+    {
+        opacity:0;
+    }
+    20%
+    {
+        opacity:0;
+    }
+    21%
+    {
+        opacity:1;
+    }
+    24%
+    {
+        opacity:0;
+    }
+    104%
+    {
+        opacity:0;
+    }
+}
+

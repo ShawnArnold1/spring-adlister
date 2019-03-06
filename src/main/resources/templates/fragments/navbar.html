@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+    </head>
+    <body>
+        <th:block th:fragment="navbar">
+            <nav class="navbar navbar-light bg-light">
+           
+                    <a class="navbar-brand btn btn-primary" th:href="@{/rolldice}">
+                        Roll Home
+                    </a>
+                <a class="navbar-brand btn btn-primary" th:href="@{/posts/create}">
+                    Create Post
+                </a>
+            
+            <a class="navbar-brand btn btn-primary" th:href="@{/posts}">
+                View Posts
+            </a>
+        </nav>
+        </th:block>
+    </body>
+</html>
